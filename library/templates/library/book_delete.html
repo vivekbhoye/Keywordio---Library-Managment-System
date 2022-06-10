@@ -1,0 +1,23 @@
+{% extends 'library/base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}Delete Book{% endblock title %}
+
+{% block content %}
+<div class="container py-4">
+    <h1>Delete Book</h1>
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Book Name : {{ book.name }}</h4>
+                <p class="card-text">Book Author : {{ book.author }}</p>
+                <p class="card-text">No of pages : {{ book.no_of_pages }}</p>
+            </div>
+        </div>
+        <br>
+        <form action="" method="post">
+            {% csrf_token %}
+            <h4>Do you want delete above book from Records?</h4>
+            <button type="submit" class="btn btn-danger">Delete</button>
+        </form>
+
+</div>
+{% endblock content %}

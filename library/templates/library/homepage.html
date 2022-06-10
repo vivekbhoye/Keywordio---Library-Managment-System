@@ -1,0 +1,50 @@
+{% extends 'library/base.html' %}
+{% load static %}
+{% block title %}Homepage{% endblock title %}
+
+{% block content %}
+<!-- add notification logout login -->
+<div class="container py-4">
+    <h1>Book List</h1>
+    {% for book in books %}
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-1">
+                    <img src="{% static 'book.png' %}" style="height: 30px; width: 30px;" alt="">
+                </div>
+                <div class="col-11 ">
+                    <h4 class="card-title"><a href="{% url 'book-detail' book.pk %}"> Book Name : {{ book.name }}</a>
+                        {% if user.is_authenticated %}
+                        <span style="float:right ;"><a href="{% url 'book-update' book.pk %}"> <button class="btn btn-primary me-2">Update</button></span></a>
+                        <span style="float:right ;"><a href="{% url 'book-delete' book.pk %}"><button class="btn btn-warning me-2">Delete</button></span></a>
+                        {% endif %}
+                    </h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1">
+                    <img src="{% static 'author.png' %}" style="height: 30px; width: 30px;" alt="">
+                </div>
+                <div class="col-11 py-2">
+                    <p class="card-text">Book Author : {{ book.author }}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1">
+                    <img src="{% static 'pages.png' %}" style="height: 30px; width: 30px;" alt="">
+                </div>
+                <div class="col-11 py-2">
+            <p class="card-text">No of pages : {{ book.no_of_pages }}</p>
+                    
+                </div>
+            </div>
+            
+           
+            
+        </div>
+    </div>
+    {% endfor %}
+    
+</div>
+{% endblock content %}

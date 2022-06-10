@@ -1,0 +1,22 @@
+{% extends 'library/base.html' %}
+
+{% block title %}Book Detail{% endblock title %}
+
+{% block content %}
+<div class="container py-4">
+    <h1>Book Details</h1>
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Book Name : {{ book.name }}
+                {% if user.is_authenticated %}
+                <span style="float:right ;"><a href="{% url 'book-update' book.pk %}"> <button class="btn btn-primary me-2">Update</button></span></a>
+                <span style="float:right ;"><a href="{% url 'book-delete' book.pk %}"><button class="btn btn-warning me-2">Delete</button></span></a>
+                {% endif %}
+            </h4>
+            <p class="card-text">Book Author : {{ book.author }}</p>
+            <p class="card-text">No of pages : {{ book.no_of_pages }}</p>
+        </div>
+    </div>
+    
+</div>
+{% endblock content %}
