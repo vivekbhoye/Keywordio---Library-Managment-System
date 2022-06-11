@@ -23,7 +23,7 @@ admin can login by using admin login method.
 
 ```bash
   git clone https://github.com/vivekbhoye/Keywordio---Library-Managment-System
-  cd 
+  cd Keywordio---Library-Managment-System
 ```
 
 2. Create new virtual environment and activate it.
