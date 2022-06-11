@@ -27,10 +27,10 @@ admin can login by using admin login method.
 ```
 
 2. Create new virtual environment and activate it.
-
+  replace path/to/directory with your path 
 ```bash
   python3 -m venv .venv
-  source "Keywordio---Library-Managment-System/.venv/bin/activate"
+  source "path/to/directory/Keywordio---Library-Managment-System/.venv/bin/activate"
 ```
 3. install all dependency using below command.
 
