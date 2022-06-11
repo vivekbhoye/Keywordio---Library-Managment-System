@@ -16,7 +16,10 @@ admin can login by using admin login method.
 
 - [@vivekbhoye](https://github.com/vivekbhoye)
 
-
+## Prerequisites
+1. Python 3
+2. python3-venv (if-needed)
+ ```sudo apt-get install python3-venv```
 ## Installation
 
 1. Clone git repository
