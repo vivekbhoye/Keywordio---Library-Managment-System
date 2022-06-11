@@ -64,7 +64,7 @@ DATABASES = {
   python manage.py runserver
 ```
 
-7. now navigate to http://127.0.0.1:8000/ 
+7. now navigate to ``http://127.0.0.1:8000/``` 
 ## Screenshots
 
 Admin Signup ( created user will have admin permissions,no duplicates email and username allowed ) 
